@@ -1,4 +1,4 @@
-import { Link, LinkProps } from "./Link";
+import { Link, LinkProps } from './Link';
 
 interface LinksProps {
   links: LinkProps[];
@@ -7,7 +7,7 @@ interface LinksProps {
 export const Links = ({ links }: LinksProps) => (
   <ul className="hidden md:flex gap-5 text-xl md:text-base bg-blue-200">
     {links.map((link) => (
-      <Link key={link.anchor} {...link} />
+      <Link key={link.to} {...link} />
     ))}
   </ul>
 );

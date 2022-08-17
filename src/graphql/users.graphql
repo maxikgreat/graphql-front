@@ -1,6 +1,6 @@
 query GetUsers {
-    users {
-        username
-        id
-    }
+  users {
+    username
+    id
+  }
 }

@@ -1,4 +1,4 @@
-@import "./fonts.css";
+@import './fonts.css';
 
 @tailwind base;
 @tailwind components;
@@ -6,4 +6,5 @@
 
 :root {
   letter-spacing: 0.75px;
+  --header-height: 80px;
 }

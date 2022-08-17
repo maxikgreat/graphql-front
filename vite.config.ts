@@ -1,6 +1,6 @@
-import react from "@vitejs/plugin-react";
-import path from "path";
-import { defineConfig } from "vite";
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,24 +8,32 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: "@",
-        replacement: path.resolve(__dirname, "src"),
+        find: '@',
+        replacement: path.resolve(__dirname, 'src'),
       },
       {
-        find: "@assets",
-        replacement: path.resolve(__dirname, "src/assets"),
+        find: '@assets',
+        replacement: path.resolve(__dirname, 'src/assets'),
       },
       {
-        find: "@components",
-        replacement: path.resolve(__dirname, "src/components"),
+        find: '@components',
+        replacement: path.resolve(__dirname, 'src/components'),
       },
       {
-        find: "@styles",
-        replacement: path.resolve(__dirname, "src/styles"),
+        find: '@styles',
+        replacement: path.resolve(__dirname, 'src/styles'),
       },
       {
-        find: "@pages",
-        replacement: path.resolve(__dirname, "src/pages"),
+        find: '@pages',
+        replacement: path.resolve(__dirname, 'src/pages'),
+      },
+      {
+        find: '@graphql',
+        replacement: path.resolve(__dirname, 'src/graphql'),
+      },
+      {
+        find: '@graphql-generated',
+        replacement: path.resolve(__dirname, 'src/graphql/generated.tsx'),
       },
     ],
   },

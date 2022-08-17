@@ -1,15 +1,17 @@
+import { NavLink } from 'react-router-dom';
+
 export interface LinkProps {
-  anchor: string;
+  to: string;
   title: string;
 }
 
-export const Link = ({ anchor, title }: LinkProps) => (
+export const Link = ({ to, title }: LinkProps) => (
   <li className="p-3 border-b border-b-white md:p-0 md:border-none first-of-type:border-t first-of-type:border-t-white text-right">
-    <a
-      href={anchor}
+    <NavLink
+      to={to}
       className="outline-none hover:text-blue-900 active:text-blue-900"
     >
       {title}
-    </a>
+    </NavLink>
   </li>
 );

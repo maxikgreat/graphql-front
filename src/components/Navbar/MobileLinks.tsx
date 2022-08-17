@@ -1,5 +1,5 @@
-import { AuthorizationButtons } from "@components/Navbar/AuthorizationButtons";
-import { Link, LinkProps } from "@components/Navbar/Link";
+import { AuthorizationButtons } from '@components/Navbar/AuthorizationButtons';
+import { Link, LinkProps } from '@components/Navbar/Link';
 
 interface MobileLinksProps {
   links: LinkProps[];

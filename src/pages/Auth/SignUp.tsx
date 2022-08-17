@@ -1,0 +1,53 @@
+import { Button } from '@components/Button';
+import { Input } from '@components/Input';
+import { joiResolver } from '@hookform/resolvers/joi';
+import { AuthWrapper } from '@pages/Auth/components/AuthWrapper';
+import * as Joi from 'joi';
+import { useForm } from 'react-hook-form';
+
+interface SignUpSchema {
+  username: string;
+  password: string;
+  confirmPassword: string;
+}
+
+const schema = Joi.object<SignUpSchema>({
+  username: Joi.string().required(),
+  password: Joi.string().required(),
+  confirmPassword: Joi.string().required().valid(Joi.ref('password')),
+});
+
+export const SignUp = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<SignUpSchema>({
+    resolver: joiResolver(schema),
+  });
+
+  const onSubmit = () => null;
+
+  return (
+    <AuthWrapper onSubmit={handleSubmit(onSubmit)}>
+      <Input
+        label="Username"
+        error={errors.username?.message}
+        {...register('username')}
+      />
+      <Input
+        label="Password"
+        error={errors.password?.message}
+        type="password"
+        {...register('password')}
+      />
+      <Input
+        label="Confirm password"
+        error={errors.confirmPassword?.message}
+        type="password"
+        {...register('confirmPassword')}
+      />
+      <Button type="submit">Sign up</Button>
+    </AuthWrapper>
+  );
+};

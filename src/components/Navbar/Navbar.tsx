@@ -1,30 +1,30 @@
-import { AuthorizationButtons } from "./AuthorizationButtons";
-import { Links } from "./Links";
-import { MobileLinks } from "./MobileLinks";
-import { LinkProps } from "@components/Navbar/Link";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { useState } from "react";
+import { AuthorizationButtons } from './AuthorizationButtons';
+import { Links } from './Links';
+import { MobileLinks } from './MobileLinks';
+import { LinkProps } from '@components/Navbar/Link';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { useState } from 'react';
 
 const links: LinkProps[] = [
   {
-    anchor: "#home",
-    title: "Home",
+    to: '/',
+    title: 'Home',
   },
   {
-    anchor: "#about",
-    title: "About",
+    to: '#about',
+    title: 'About',
   },
   {
-    anchor: "#support",
-    title: "Support",
+    to: '#support',
+    title: 'Support',
   },
   {
-    anchor: "#platforms",
-    title: "Platforms",
+    to: '#platforms',
+    title: 'Platforms',
   },
   {
-    anchor: "#pricing",
-    title: "Pricing",
+    to: '#pricing',
+    title: 'Pricing',
   },
 ];
 
@@ -34,7 +34,7 @@ export const Navbar = () => {
   const openMenu = () => setMobileMenuOpened(true);
   const closeMenu = () => setMobileMenuOpened(false);
 
-  const mobileIconClassName = "md:hidden w-10 cursor-pointer text-blue-900";
+  const mobileIconClassName = 'md:hidden w-10 cursor-pointer text-blue-900';
 
   return (
     <header>
