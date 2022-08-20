@@ -22,8 +22,7 @@
       "@components/*": ["./src/components/*"],
       "@styles/*": ["./src/styles/*"],
       "@pages/*": ["./src/pages/*"],
-      "@graphql/*": ["./src/graphql/*"],
-      "@graphql-generated": ["./src/graphql/generated.tsx"]
+      "@graphql/*": ["./src/graphql/*"]
     }
   },
   "include": ["src"],

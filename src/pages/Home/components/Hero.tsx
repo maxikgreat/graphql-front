@@ -9,7 +9,9 @@ export const Hero = () => (
         Cloud Management
       </p>
       <p className="text-pink-900 text-lg">This is our tech branch</p>
-      <Button className="text-2xl px-6 py-3">Try for free</Button>
+      <Button className="text-2xl px-6 py-3" onClick={getPetsQuery}>
+        Try for free
+      </Button>
     </div>
     <div className="w-1/2 sm:w-3/4 md:w-full min-w-[300px] mx-auto">
       <img src={HeroImage} alt="hero image" />

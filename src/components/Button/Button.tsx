@@ -5,14 +5,14 @@ interface ButtonProps extends HTMLProps<HTMLButtonElement> {
   className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   type?: 'submit';
-  isLoading?: boolean;
+  loading?: boolean;
 }
 
 export const Button = ({
   children,
   appearance = 'default',
   className = '',
-  isLoading = false,
+  loading = false,
   disabled,
   ...rest
 }: PropsWithChildren<ButtonProps>) => {
@@ -26,10 +26,10 @@ export const Button = ({
   return (
     <button
       {...rest}
-      disabled={disabled || isLoading}
+      disabled={disabled || loading}
       className={`${appearanceClassName} disabled:opacity-70 disabled:cursor-not-allowed transition-colors px-4 py-2 rounded-xl ${className}`}
     >
-      {isLoading ? 'Loading...' : children}
+      {loading ? 'Loading...' : children}
     </button>
   );
 };

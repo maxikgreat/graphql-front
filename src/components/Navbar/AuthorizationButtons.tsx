@@ -1,5 +1,7 @@
+import { AuthContext } from '@/context/auth/auth';
 import { Button } from '@components/Button';
 import { AppRoute } from '@pages/AppRoutes';
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface TryForFreeProps {
@@ -8,12 +10,27 @@ interface TryForFreeProps {
 
 export const AuthorizationButtons = ({ className = '' }: TryForFreeProps) => {
   const navigate = useNavigate();
+  const { user, signOut } = useContext(AuthContext);
+
+  const signOutHandler = () => signOut().then(() => navigate(AppRoute.Home));
+
   return (
     <div className={`${className} gap-3`}>
-      <Button onClick={() => navigate(AppRoute.SignUp)}>Sign up</Button>
-      <Button onClick={() => navigate(AppRoute.SignIn)} appearance="outline">
-        Sign in
-      </Button>
+      {user ? (
+        <Button onClick={signOutHandler} appearance="outline">
+          Sign out
+        </Button>
+      ) : (
+        <>
+          <Button onClick={() => navigate(AppRoute.SignUp)}>Sign up</Button>
+          <Button
+            onClick={() => navigate(AppRoute.SignIn)}
+            appearance="outline"
+          >
+            Sign in
+          </Button>
+        </>
+      )}
     </div>
   );
 };

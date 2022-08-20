@@ -32,6 +32,6 @@ module.exports = {
       },
     ],
     'react/self-closing-comp': 2,
-    "react/display-name": 0,
+    'react/display-name': 0,
   },
 };

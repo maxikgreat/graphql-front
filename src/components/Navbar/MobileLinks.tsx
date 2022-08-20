@@ -11,7 +11,7 @@ export const MobileLinks = ({ links, isVisible }: MobileLinksProps) =>
     <div className="block md:hidden fixed top-[80px] left-0 right-0 bg-blue-200">
       <ul>
         {links.map((link) => (
-          <Link key={link.anchor} {...link} />
+          <Link key={link.to} {...link} />
         ))}
       </ul>
       <AuthorizationButtons className="flex p-4 justify-end" />

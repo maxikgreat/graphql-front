@@ -31,10 +31,6 @@ export default defineConfig({
         find: '@graphql',
         replacement: path.resolve(__dirname, 'src/graphql'),
       },
-      {
-        find: '@graphql-generated',
-        replacement: path.resolve(__dirname, 'src/graphql/generated.tsx'),
-      },
     ],
   },
 });

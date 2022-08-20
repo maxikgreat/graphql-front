@@ -1,11 +1,37 @@
+import { AuthContext } from '@/context/auth/auth';
+import { tokens } from '@/services/tokens';
 import { Navbar } from '@components/Navbar';
+import {
+  CheckTokenQuery,
+  useCheckTokenLazyQuery,
+} from '@graphql/generated/types';
 import { AppRoutes } from '@pages/AppRoutes';
+import { useContext, useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-export const App = () => (
-  <>
-    <Navbar />
-    <main>
-      <AppRoutes />
-    </main>
-  </>
-);
+export const App = () => {
+  const [checkTokenQuery] = useCheckTokenLazyQuery({
+    onCompleted: (data: CheckTokenQuery) => checkTokenSuccess(data.checkToken),
+  });
+
+  const { checkTokenSuccess } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (!tokens.get().access) {
+      return;
+    }
+
+    checkTokenQuery();
+  }, [checkTokenQuery]);
+
+  return (
+    <>
+      <ToastContainer hideProgressBar />
+      <Navbar />
+      <main>
+        <AppRoutes />
+      </main>
+    </>
+  );
+};
