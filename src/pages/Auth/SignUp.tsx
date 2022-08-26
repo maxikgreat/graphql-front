@@ -1,7 +1,7 @@
-import { Button } from '@components/Button';
-import { Input } from '@components/Input';
+import { Button } from '@/components/Button';
+import { Input } from '@/components/Input';
+import { AuthWrapper } from '@/pages/Auth/components/AuthWrapper';
 import { joiResolver } from '@hookform/resolvers/joi';
-import { AuthWrapper } from '@pages/Auth/components/AuthWrapper';
 import * as Joi from 'joi';
 import { useForm } from 'react-hook-form';
 

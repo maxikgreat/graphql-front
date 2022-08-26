@@ -1,11 +1,11 @@
+import { Navbar } from '@/components';
 import { AuthContext } from '@/context/auth/auth';
+import { AppRoutes } from '@/pages/AppRoutes';
 import { tokens } from '@/services/tokens';
-import { Navbar } from '@components/Navbar';
 import {
   CheckTokenQuery,
   useCheckTokenLazyQuery,
 } from '@graphql/generated/types';
-import { AppRoutes } from '@pages/AppRoutes';
 import { useContext, useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

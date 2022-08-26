@@ -1,10 +1,9 @@
-import { AuthorizationButtons } from './AuthorizationButtons';
 import { Links } from './Links';
-import { MobileLinks } from './MobileLinks';
-import { Close, Logo, Menu } from '@assets/images';
-import { LinkProps } from '@components/Navbar/Link';
+import { Sidebar } from './Sidebar';
+import { Logo } from '@/assets/images';
+import { LinkProps } from '@/components/Navbar/Link';
+import { AppRoute } from '@/pages/AppRoutes';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { AppRoute } from '@pages/AppRoutes';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -32,16 +31,17 @@ const links: LinkProps[] = [
 ];
 
 export const Navbar = () => {
-  const [isMobileMenuOpened, setMobileMenuOpened] = useState(false);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
-  const openMenu = () => setMobileMenuOpened(true);
-  const closeMenu = () => setMobileMenuOpened(false);
+  const openMenu = () => setSidebarOpen(true);
+  const closeMenu = () => setSidebarOpen(false);
 
-  const iconClassName = 'w-[28px] text-white';
+  const iconClassName =
+    'w-[28px] text-white cursor-pointer hover:text-secondary';
 
   return (
     <header className="padding-x flex-center">
-      <nav className="w-full flex py-6 justify-between items-center navbar">
+      <nav className="w-full flex py-6 justify-between items-center">
         <Link to={AppRoute.Home} className="cursor-pointer">
           <img src={Logo} alt="hoobank" className="w-[124px] h-[32px]" />
         </Link>
@@ -49,14 +49,14 @@ export const Navbar = () => {
         <Links links={links} />
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          {isMobileMenuOpened ? (
+          {isSidebarOpen ? (
             <XIcon onClick={closeMenu} className={iconClassName} />
           ) : (
             <MenuIcon onClick={openMenu} className={iconClassName} />
           )}
         </div>
 
-        {isMobileMenuOpened && <MobileLinks links={links} />}
+        {isSidebarOpen && <Sidebar links={links} />}
       </nav>
     </header>
   );

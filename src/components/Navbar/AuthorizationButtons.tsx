@@ -1,6 +1,6 @@
+import { Button } from '@/components/Button';
 import { AuthContext } from '@/context/auth/auth';
-import { Button } from '@components/Button';
-import { AppRoute } from '@pages/AppRoutes';
+import { AppRoute } from '@/pages/AppRoutes';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 

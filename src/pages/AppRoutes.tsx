@@ -1,6 +1,6 @@
-import { SignIn, SignUp } from '@pages/Auth';
-import { Home } from '@pages/Home';
-import { NotFound } from '@pages/NotFound';
+import { SignIn, SignUp } from '@/pages/Auth';
+import { Home } from '@/pages/Home';
+import { NotFound } from '@/pages/NotFound';
 import { Routes, Route } from 'react-router-dom';
 
 export enum AppRoute {

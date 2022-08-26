@@ -6,7 +6,7 @@ export interface LinkProps {
 }
 
 export const Link = ({ to, title }: LinkProps) => (
-  <li className="cursor-pointer font-normal text-white">
+  <li className="cursor-pointer font-normal text-white hover:text-secondary">
     <NavLink to={to}>{title}</NavLink>
   </li>
 );

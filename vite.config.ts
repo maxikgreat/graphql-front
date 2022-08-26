@@ -12,22 +12,6 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src'),
       },
       {
-        find: '@assets',
-        replacement: path.resolve(__dirname, 'src/assets'),
-      },
-      {
-        find: '@components',
-        replacement: path.resolve(__dirname, 'src/components'),
-      },
-      {
-        find: '@styles',
-        replacement: path.resolve(__dirname, 'src/styles'),
-      },
-      {
-        find: '@pages',
-        replacement: path.resolve(__dirname, 'src/pages'),
-      },
-      {
         find: '@graphql',
         replacement: path.resolve(__dirname, 'src/graphql'),
       },

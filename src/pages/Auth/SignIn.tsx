@@ -1,10 +1,10 @@
+import { Button } from '@/components/Button';
+import { Input } from '@/components/Input';
 import { AuthContext } from '@/context/auth/auth';
-import { Button } from '@components/Button';
-import { Input } from '@components/Input';
+import { AppRoute } from '@/pages/AppRoutes';
+import { AuthWrapper } from '@/pages/Auth/components/AuthWrapper';
 import { useSignInMutation } from '@graphql/generated/types';
 import { joiResolver } from '@hookform/resolvers/joi';
-import { AppRoute } from '@pages/AppRoutes';
-import { AuthWrapper } from '@pages/Auth/components/AuthWrapper';
 import * as Joi from 'joi';
 import { useContext, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
