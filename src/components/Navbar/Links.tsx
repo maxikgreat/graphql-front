@@ -5,7 +5,7 @@ interface LinksProps {
 }
 
 export const Links = ({ links }: LinksProps) => (
-  <ul className="hidden md:flex gap-5 text-xl md:text-base bg-blue-200">
+  <ul className="list-none sm:flex hidden justify-end items-center flex-1 gap-10">
     {links.map((link) => (
       <Link key={link.to} {...link} />
     ))}

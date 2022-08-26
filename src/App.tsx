@@ -28,8 +28,8 @@ export const App = () => {
   return (
     <>
       <ToastContainer hideProgressBar />
-      <Navbar />
-      <main>
+      <main className="bg-primary w-full overflow-hidden">
+        <Navbar />
         <AppRoutes />
       </main>
     </>

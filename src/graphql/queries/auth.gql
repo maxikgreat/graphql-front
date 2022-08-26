@@ -1,34 +1,34 @@
 mutation SignUp($input: SignUpInput!) {
-    signUp(authCredentials: $input) {
-        username
-    }
+  signUp(authCredentials: $input) {
+    username
+  }
 }
 
 mutation SignIn($input: SignInInput!) {
-    signIn(authCredentials: $input) {
-        user {
-            id
-            username
-        }
-        accessToken
-        refreshToken
+  signIn(authCredentials: $input) {
+    user {
+      id
+      username
     }
+    accessToken
+    refreshToken
+  }
 }
 
 mutation Refresh {
-    refresh {
-        user {
-            id
-            username
-        }
-        accessToken
-        refreshToken
+  refresh {
+    user {
+      id
+      username
     }
+    accessToken
+    refreshToken
+  }
 }
 
 query CheckToken {
-    checkToken {
-        id
-        username
-    }
+  checkToken {
+    id
+    username
+  }
 }

@@ -1,9 +1,12 @@
 import { AuthorizationButtons } from './AuthorizationButtons';
 import { Links } from './Links';
 import { MobileLinks } from './MobileLinks';
+import { Close, Logo, Menu } from '@assets/images';
 import { LinkProps } from '@components/Navbar/Link';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { AppRoute } from '@pages/AppRoutes';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const links: LinkProps[] = [
   {
@@ -34,24 +37,26 @@ export const Navbar = () => {
   const openMenu = () => setMobileMenuOpened(true);
   const closeMenu = () => setMobileMenuOpened(false);
 
-  const mobileIconClassName = 'md:hidden w-10 cursor-pointer text-blue-900';
+  const iconClassName = 'w-[28px] text-white';
 
   return (
-    <header>
-      <nav className="w-screen h-[80px] bg-blue-200 fixed drop-shadow-md flex items-center justify-between px-4">
-        <div className="flex gap-7 items-center">
-          <h2 className="uppercase font-bold text-2xl sm:text-3xl text-blue-900">
-            Brand
-          </h2>
-          <Links links={links} />
-          <MobileLinks isVisible={isMobileMenuOpened} links={links} />
+    <header className="padding-x flex-center">
+      <nav className="w-full flex py-6 justify-between items-center navbar">
+        <Link to={AppRoute.Home} className="cursor-pointer">
+          <img src={Logo} alt="hoobank" className="w-[124px] h-[32px]" />
+        </Link>
+
+        <Links links={links} />
+
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          {isMobileMenuOpened ? (
+            <XIcon onClick={closeMenu} className={iconClassName} />
+          ) : (
+            <MenuIcon onClick={openMenu} className={iconClassName} />
+          )}
         </div>
-        <AuthorizationButtons className="hidden md:flex" />
-        {isMobileMenuOpened ? (
-          <XIcon onClick={closeMenu} className={mobileIconClassName} />
-        ) : (
-          <MenuIcon onClick={openMenu} className={mobileIconClassName} />
-        )}
+
+        {isMobileMenuOpened && <MobileLinks links={links} />}
       </nav>
     </header>
   );

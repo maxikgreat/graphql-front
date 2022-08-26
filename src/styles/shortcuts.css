@@ -1,0 +1,61 @@
+@layer utilities {
+    .box-width {
+        @apply xl:max-w-[1280px] w-full;
+    }
+
+    .heading2 {
+        @apply font-bold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full;
+    }
+
+    .paragraph {
+        @apply font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px];
+    }
+
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+
+    .flex-start {
+        @apply flex justify-center items-start;
+    }
+
+    .padding-x {
+        @apply sm:px-16 px-6;
+    }
+
+    .padding-y {
+        @apply sm:py-16 py-6;
+    }
+
+    .padding {
+        @apply sm:px-16 px-6 sm:py-12 py-4;
+    }
+
+    .margin-x {
+        @apply sm:mx-16 mx-6;
+    }
+
+    .margin-y {
+        @apply sm:my-16 my-6;
+    }
+
+    .section {
+        @apply flex md:flex-row flex-col padding-y;
+    }
+
+    .section-reverse {
+        @apply flex md:flex-row flex-col-reverse padding-y;
+    }
+
+    .section-img-reverse {
+        @apply flex-1 flex-center md:mr-10 mr-0 md:mt-0 mt-10 relative;
+    }
+
+    .section-img {
+        @apply flex-1 flex-center md:ml-10 ml-0 md:mt-0 mt-10 relative
+    }
+
+    .section-info {
+        @apply flex-1 flex-start flex-col;
+    }
+}
