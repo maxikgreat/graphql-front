@@ -1,6 +1,7 @@
 import { Links } from './Links';
 import { Sidebar } from './Sidebar';
 import { Logo } from '@/assets/images';
+import { Container } from '@/components';
 import { LinkProps } from '@/components/Navbar/Link';
 import { AppRoute } from '@/pages/AppRoutes';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
@@ -40,24 +41,26 @@ export const Navbar = () => {
     'w-[28px] text-white cursor-pointer hover:text-secondary';
 
   return (
-    <header className="padding-x flex-center">
-      <nav className="w-full flex py-6 justify-between items-center">
-        <Link to={AppRoute.Home} className="cursor-pointer">
-          <img src={Logo} alt="hoobank" className="w-[124px] h-[32px]" />
-        </Link>
+    <Container className="padding-x">
+      <header className="flex-center">
+        <nav className="w-full flex py-6 justify-between items-center">
+          <Link to={AppRoute.Home} className="cursor-pointer">
+            <img src={Logo} alt="hoobank" className="w-[124px] h-[32px]" />
+          </Link>
 
-        <Links links={links} />
+          <Links links={links} />
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          {isSidebarOpen ? (
-            <XIcon onClick={closeMenu} className={iconClassName} />
-          ) : (
-            <MenuIcon onClick={openMenu} className={iconClassName} />
-          )}
-        </div>
+          <div className="sm:hidden flex flex-1 justify-end items-center">
+            {isSidebarOpen ? (
+              <XIcon onClick={closeMenu} className={iconClassName} />
+            ) : (
+              <MenuIcon onClick={openMenu} className={iconClassName} />
+            )}
+          </div>
 
-        {isSidebarOpen && <Sidebar links={links} />}
-      </nav>
-    </header>
+          {isSidebarOpen && <Sidebar links={links} />}
+        </nav>
+      </header>
+    </Container>
   );
 };

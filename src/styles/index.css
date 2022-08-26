@@ -83,18 +83,6 @@
   box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
 
-.feedback-container .feedback-card:last-child {
-  margin-right: 0;
-}
-
-.feedback-card {
-  background: transparent;
-}
-
-.feedback-card:hover {
-  background: var(--black-gradient);
-}
-
 .blue__gradient {
   background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
   filter: blur(100px);

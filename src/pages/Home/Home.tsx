@@ -1,4 +1,12 @@
-import { Features, Hero, Stats } from './components';
+import {
+  Billing,
+  CardDeal,
+  CTA,
+  Features,
+  Hero,
+  Stats,
+  Testimonials,
+} from './components';
 import { Container } from '@/components';
 
 export const Home = () => (
@@ -9,7 +17,10 @@ export const Home = () => (
     <Container className="padding-x">
       <Stats />
       <Features />
-      {/* Business Billing CardDeal Testimonials Clients CTA Footer */}
+      <Billing />
+      <CardDeal />
+      <Testimonials />
+      <CTA />
     </Container>
   </>
 );

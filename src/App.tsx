@@ -1,4 +1,4 @@
-import { Navbar } from '@/components';
+import { Navbar, Footer } from '@/components';
 import { AuthContext } from '@/context/auth/auth';
 import { AppRoutes } from '@/pages/AppRoutes';
 import { tokens } from '@/services/tokens';
@@ -31,6 +31,7 @@ export const App = () => {
       <main className="bg-primary w-full overflow-hidden">
         <Navbar />
         <AppRoutes />
+        <Footer />
       </main>
     </>
   );

@@ -26,7 +26,7 @@ export const Button = ({
     <button
       {...rest}
       disabled={disabled || loading}
-      className={`${appearanceClassName} disabled:opacity-70 disabled:cursor-not-allowed px-4 py-2 ${className}`}
+      className={`${appearanceClassName} rounded-xl disabled:opacity-70 disabled:cursor-not-allowed px-4 py-2 ${className}`}
     >
       {loading ? 'Loading...' : children}
     </button>
