@@ -8,7 +8,7 @@
   }
 
   .paragraph {
-    @apply font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px];
+    @apply font-normal text-dim-white text-[18px] leading-[30.8px];
   }
 
   .flex-center {

@@ -23,8 +23,8 @@
   },
   "lint-staged": {
     "*.+(ts|tsx|js|jsx)": [
-      "eslint --config ./prod.eslintrc.cjs --fix",
-      "prettier --write ."
+      "prettier --write .",
+      "eslint --config ./prod.eslintrc.cjs --fix"
     ]
   },
   "dependencies": {
