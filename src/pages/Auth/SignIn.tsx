@@ -52,7 +52,6 @@ export const SignIn = () => {
 
   const [signInMutation, { loading }] = useSignInMutation({
     onCompleted: (data) => signInSuccess(data.signIn),
-    onError: () => toast.error('Incorrect email or password'),
   });
 
   return (

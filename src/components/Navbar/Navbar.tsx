@@ -1,4 +1,6 @@
+import { AuthorizationButtons } from './AuthorizationButtons';
 import { Links } from './Links';
+import { ModeSwitcher } from './ModeSwitcher';
 import { Sidebar } from './Sidebar';
 import { Logo } from '@/assets/images';
 import { Container } from '@/components';
@@ -21,14 +23,6 @@ const links: LinkProps[] = [
     to: '#support',
     title: 'Support',
   },
-  {
-    to: '#platforms',
-    title: 'Platforms',
-  },
-  {
-    to: '#pricing',
-    title: 'Pricing',
-  },
 ];
 
 export const Navbar = () => {
@@ -49,8 +43,11 @@ export const Navbar = () => {
           </Link>
 
           <Links links={links} />
+          <AuthorizationButtons className="mx-5 sm:flex hidden" />
+          <ModeSwitcher className="sm:block hidden" />
 
-          <div className="sm:hidden flex flex-1 justify-end items-center">
+          <div className="sm:hidden flex flex-1 justify-end items-center gap-8">
+            <ModeSwitcher className="sm:hidden block" />
             {isSidebarOpen ? (
               <XIcon onClick={closeMenu} className={iconClassName} />
             ) : (

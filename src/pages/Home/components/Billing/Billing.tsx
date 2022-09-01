@@ -4,7 +4,7 @@ export const Billing = () => (
   <section id="billing" className="section-reverse">
     <div className="section-img-reverse">
       <img src={Bill} alt="billing" className="w-full h-full relative z-[5]" />
-      <div className="absolute z-[0] w-1/2 h-1/2 -left-1/2 bottom-0 rounded-full pink__gradient gradient-animated" />
+      <div className="absolute z-[0] w-1/2 h-1/2 -left-1/2 bottom-0 rounded-full bg-pink-gradient blur-[200px] gradient-animated" />
     </div>
 
     <div className="section-info gap-5">

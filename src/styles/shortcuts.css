@@ -58,4 +58,8 @@
   .section-info {
     @apply flex-1 flex-start flex-col;
   }
+
+  .bg {
+    @apply dark:bg-white dark:bg-primary;
+  }
 }

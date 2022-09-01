@@ -8,9 +8,9 @@ export const AuthWrapper = ({
   children,
   onSubmit,
 }: PropsWithChildren<AuthWrapperProps>) => (
-  <section className="w-screen h-screen flex justify-center items-center">
+  <section className="w-screen h-[95vh] flex justify-center items-center bg-test">
     <form
-      className="md:w-2/5 w-[90%] drop-shadow-md bg-blue-50 rounded-md flex flex-col gap-6 p-5"
+      className="md:w-2/5 w-[90%] drop-shadow-md flex flex-col gap-3 p-5 bg-bastille rounded-2xl"
       onSubmit={onSubmit}
     >
       {children}

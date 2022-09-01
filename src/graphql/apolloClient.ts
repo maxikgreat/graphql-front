@@ -1,3 +1,4 @@
+import { toastError } from '@/components/Toast/toasts';
 import { tokens } from '@/services/tokens';
 import {
   ApolloClient,
@@ -9,9 +10,9 @@ import { setContext } from '@apollo/client/link/context';
 import { FetchResult } from '@apollo/client/link/core/types';
 import { onError } from '@apollo/client/link/error';
 import { Observable } from '@apollo/client/utilities';
+import { getErrorMessage } from '@graphql/utils/getErrorMessage';
 import { getIsUnauthenticatedError } from '@graphql/utils/getIsUnauthenticatedError';
 import { updateTokens } from '@graphql/utils/updateTokens';
-import { toast } from 'react-toastify';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3000/graphql',
@@ -31,11 +32,12 @@ const authLink = setContext((operation, { headers }) => {
 
 const errorLink = onError(({ networkError, ...rest }) => {
   if (networkError) {
-    toast.error('Network error');
+    toastError('Network error');
     return;
   }
 
   if (!getIsUnauthenticatedError(rest)) {
+    toastError(getErrorMessage(rest));
     return;
   }
 

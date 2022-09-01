@@ -1,4 +1,3 @@
 .feature:hover {
   background: var(--black-gradient);
-  box-shadow: var(--card-shadow);
 }

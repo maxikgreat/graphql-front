@@ -1,7 +1,7 @@
 .feedback {
-    background: transparent;
+  background: transparent;
 }
 
 .feedback:hover {
-    background: var(--black-gradient);
+  background: var(--black-gradient);
 }

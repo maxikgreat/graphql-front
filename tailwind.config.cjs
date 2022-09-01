@@ -1,13 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: '#00040f',
-        secondary: '#00f6ff',
-        'dim-white': 'rgba(255, 255, 255, 0.7)',
-        'dim-blue': 'rgba(9, 151, 124, 0.1)',
+        primary: 'var(--primary)',
+        bastille: 'var(--bastille)',
+        grey: 'var(--grey)',
+        'baltic-sea': 'var(--baltic-sea)',
+        'error': 'var(--error)',
+        secondary: 'var(--secondary)',
+        'hollywood-cerise': 'var(--hollywood-cerise)',
+        'dim-secondary': 'var(--dim-secondary)',
+        'dim-white': 'var(--dim-white)',
+        'dim-blue': 'var(--dim-blue)'
       },
       fontFamily: {
         sans: 'SF',

@@ -1,3 +1,4 @@
+import { clsx } from 'clsx';
 import { PropsWithChildren } from 'react';
 
 interface ContainerProps {
@@ -5,10 +6,10 @@ interface ContainerProps {
 }
 
 export const Container = ({
-  className = '',
+  className,
   children,
 }: PropsWithChildren<ContainerProps>) => (
-  <div className={`bg-primary flex-start ${className}`}>
+  <div className={clsx('bg flex-start', className)}>
     <div className="box-width">{children}</div>
   </div>
 );

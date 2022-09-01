@@ -1,0 +1,12 @@
+:root {
+    --primary: #00040f;
+    --bastille: #17151c;
+    --baltic-sea: #2a2731;
+    --grey: #565656;
+    --error: #ea6d6d;
+    --secondary: #00f6ff;
+    --dim-secondary: rgba(0, 246, 255, 0.25);
+    --hollywood-cerise: #B448B3;
+    --dim-white: rgba(255, 255, 255, 0.7);
+    --dim-blue: rgba(9, 151, 124, 0.1);
+}

@@ -1,7 +1,7 @@
 import { Button } from '@/components';
 
 export const CTA = () => (
-  <section className="section padding flex-center sm:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow mb-20">
+  <section className="section padding flex-center sm:flex-row flex-col bg-black-gradient rounded-[20px] shadow-xl mb-20 bg-br">
     <div className="flex-1 flex flex-col">
       <h2 className="heading2">Let’s try our service now!</h2>
       <p className="paragraph max-w-[470px] mt-5">

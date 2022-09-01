@@ -4,7 +4,7 @@ import { Discount, Robot } from '@/assets/images';
 export const Hero = () => (
   <section id="hero" className="flex md:flex-row flex-col padding-y">
     <div className="flex-1 flex-start flex-col xl:px-0 sm:px-16 px-6">
-      <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
+      <div className="flex flex-row items-center py-[6px] px-4 bg-black-2-gradient rounded-[10px] mb-2">
         <img src={Discount} alt="discount" className="w-[32px] h-[32px]" />
         <p className="paragraph ml-2">
           <span className="text-white">20%</span> Discount for
@@ -37,9 +37,9 @@ export const Hero = () => (
         alt="billing"
         className="w-full h-full relative z-[5] object-contain"
       />
-      <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient gradient-animated" />
-      <div className="absolute z-[1] w-[80%] h-[80%] bottom-40 white__gradient rounded-full" />
-      <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient gradient-animated" />
+      <div className="absolute z-[0] w-[40%] h-[35%] top-0 bg-pink-gradient blur-[200px] gradient-animated" />
+      <div className="absolute z-[1] w-[80%] h-[80%] bottom-40 bg-white-gradient blur-[600px] rounded-full" />
+      <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 bg-blue-gradient blur-[100px] gradient-animated" />
     </div>
     <div className="ss:hidden flex-center">
       <GetStarted />

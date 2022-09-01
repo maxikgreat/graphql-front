@@ -1,0 +1,102 @@
+:root {
+    --black-gradient-colors:
+        #ffffff -278.56%,
+        #6d6d6d -78.47%,
+        #11101d 91.61%;
+    --black-2-gradient-colors:
+        #272727 0%,
+        #11101d 100%;
+    --secondary-gradient-colors:
+        #def9fa -43.27%,
+        #bef3f5 -21.24%,
+        #9dedf0 12.19%,
+        #7de7eb 29.82%,
+        #5ce1e6 51.94%,
+        #33bbcf 90.29%;
+    --secondary-gradient-colors-dark:
+        #394041 -43.27%,
+        #496569 -21.24%,
+        #659b9d 12.19%,
+        #7de7eb 29.82%,
+        #5ce1e6 51.94%,
+        #33bbcf 90.29%;
+    --blue-gradient-colors:
+        rgba(188, 165, 255, 0) 0%,
+        #214d76 100%;
+    --pink-gradient-colors:
+        #f4c4f3 0%,
+        #c201c0 100%;
+    --secondary-radial-gradient-colors:
+        #def9fa 0.89%,
+        #bef3f5 17.23%,
+        #9dedf0 42.04%,
+        #7de7eb 55.12%,
+        #5ce1e6 71.54%,
+        #33bbcf 100%;
+    --secondary-radial-gradient-colors-dark:
+        #394041 -43.27%,
+        #496569 -21.24%,
+        #659b9d 12.19%,
+        #7de7eb 29.82%,
+        #5ce1e6 51.94%,
+        #33bbcf 90.29%;
+
+    --black-gradient: linear-gradient(145deg, var(--black-gradient-colors));
+    --black-2-gradient: linear-gradient(125.17deg, var(--black-2-gradient-colors));
+    --secondary-gradient: linear-gradient(157.81deg, var(--secondary-gradient-colors));
+    --blue-gradient: linear-gradient(180deg, var(--blue-gradient-colors));
+    --pink-gradient: linear-gradient(90deg, var(--pink-gradient-colors));
+    --secondary-radial-gradient: radial-gradient(64.18% 64.18% at 71.16% 35.69%, var(--secondary-radial-gradient-colors));
+}
+
+.text-gradient {
+    background: var(--secondary-radial-gradient);
+    background-image: var(--secondary-radial-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* rewrite default @base tailwind submit styles */
+.bg-secondary-gradient, [type="submit"].bg-secondary-gradient {
+    background-image: var(--secondary-gradient);
+}
+
+
+.bg-black-gradient {
+    background-image: var(--black-gradient);
+}
+
+.bg-black-2-gradient {
+    background-image: var(--black-2-gradient);
+}
+
+.bg-blue-gradient {
+    background-image: var(--blue-gradient);
+}
+
+.bg-pink-gradient {
+    background-image: var(--pink-gradient);
+}
+
+.bg-white-gradient {
+    background-image: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes move-gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.gradient-animated {
+    background-size: 400% 400%;
+    animation: move-gradient 5000ms ease-in-out infinite;
+}

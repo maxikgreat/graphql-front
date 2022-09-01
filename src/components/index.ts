@@ -3,3 +3,4 @@ export * from './Input';
 export * from './Navbar';
 export * from './Container';
 export * from './Footer';
+export * from './Toast';

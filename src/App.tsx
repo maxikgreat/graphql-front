@@ -1,4 +1,4 @@
-import { Navbar, Footer } from '@/components';
+import { Navbar, Footer, ToastProvider } from '@/components';
 import { AuthContext } from '@/context/auth/auth';
 import { AppRoutes } from '@/pages/AppRoutes';
 import { tokens } from '@/services/tokens';
@@ -7,7 +7,6 @@ import {
   useCheckTokenLazyQuery,
 } from '@graphql/generated/types';
 import { useContext, useEffect } from 'react';
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const App = () => {
@@ -27,8 +26,8 @@ export const App = () => {
 
   return (
     <>
-      <ToastContainer hideProgressBar />
-      <main className="bg-primary w-full overflow-hidden">
+      <ToastProvider />
+      <main className="bg w-full overflow-hidden">
         <Navbar />
         <AppRoutes />
         <Footer />

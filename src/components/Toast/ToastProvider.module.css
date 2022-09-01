@@ -1,0 +1,9 @@
+.toast > div {
+    background: var(--primary) !important;
+    color: var(--dim-white);
+}
+
+.error-toast {
+    border: 2px solid var(--error);
+    border-radius: 10px !important;
+}
